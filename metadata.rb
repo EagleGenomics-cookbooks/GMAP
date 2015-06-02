@@ -1,0 +1,7 @@
+name 'GMAP'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures GMAP'
+long_description 'Installs/Configures GMAP'
+version '0.1.0'
