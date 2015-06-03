@@ -3,7 +3,7 @@
 Description
 ===========
 
-Cookbook for installing GMAP (Genomic Mapping and Alignment Program for mRNA and EST Sequences): a standalone program for mapping and aligning cDNA sequences to a genome. https://www.msi.umn.edu/sw/gmap---genomic-m 
+Cookbook for installing GMAP (Genomic Mapping and Alignment Program for mRNA and EST Sequences): a standalone program for mapping and aligning cDNA sequences to a genome. http://research-pub.gene.com/gmap/ 
 Installs a specific vesion of GMAP, mainly to support deFuse on RHEL 6.5.
 
 Requirements
@@ -22,11 +22,11 @@ Include this recipe to install GMAP.
     include_recipe "GMAP::source"
 
 
-License and Author
-==================
+License and Authors
+===================
 
-Authors:: Daniel Barrell (<daniel.barrell@eaglegenomics.com>)
-Authors:: Nick James (<nick.james@eaglegenomics.com>)
+* Authors:: Daniel Barrell (<daniel.barrell@eaglegenomics.com>)
+* Authors:: Nick James (<nick.james@eaglegenomics.com>)
 
 Copyright:: 2015, Eagle Genomics.
 
