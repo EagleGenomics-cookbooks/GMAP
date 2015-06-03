@@ -1,7 +1,11 @@
 name 'GMAP'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'all_rights'
+maintainer 'Eagle Genomics'
+maintainer_email 'info@eaglegenomics.com'
+license 'apache2'
 description 'Installs/Configures GMAP'
 long_description 'Installs/Configures GMAP'
 version '0.1.0'
+
+supports 'centos', '= 6.5'
+
+depends 'build-essential'
