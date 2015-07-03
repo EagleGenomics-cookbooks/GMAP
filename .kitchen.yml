@@ -12,5 +12,5 @@ platforms:
 suites:
   - name: source
     run_list:
-      - recipe[GMAP::source]
+      - recipe[GMAP::default]
     attributes:
