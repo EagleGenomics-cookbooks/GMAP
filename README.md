@@ -21,6 +21,14 @@ Include this recipe to install GMAP.
 
     include_recipe "GMAP::source"
 
+Attributes
+==========
+
+See attributes/default.rb for default values.
+
+default['GMAP']['version']
+
+Currently this is a build from 2013-11-27.
 
 License and Authors
 ===================
