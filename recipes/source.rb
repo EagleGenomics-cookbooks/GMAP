@@ -13,7 +13,6 @@ end
 
 ##########################################################
 
-
 include_recipe 'build-essential'
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{node['GMAP']['filename']}" do
