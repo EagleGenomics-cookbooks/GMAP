@@ -4,6 +4,15 @@
 #
 # Copyright (c) 2015 Eagle Genomics, All Rights Reserved.
 
+##########################################################
+# package install
+
+package ['zlib-devel', 'tar', 'make'] do
+  action :install
+end
+
+##########################################################
+
 include_recipe 'build-essential'
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{node['GMAP']['filename']}" do
