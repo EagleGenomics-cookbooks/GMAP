@@ -37,7 +37,7 @@ License and Authors
 * Authors:: Nick James (<nick.james@eaglegenomics.com>)
 * Authors:: Bart Ailey (<bart.ailey@eaglegenomics.com>)
 
-Copyright:: 2015, Eagle Genomics.
+Copyright:: 2016, Eagle Genomics Ltd, Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

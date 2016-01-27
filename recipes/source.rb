@@ -2,7 +2,7 @@
 # Cookbook Name:: GMAP
 # Recipe:: source
 #
-# Copyright (c) 2015 Eagle Genomics, All Rights Reserved.
+# Copyright (c) 2016 Eagle Genomics Ltd, Apache License, Version 2.0.
 
 ##########################################################
 # package install
