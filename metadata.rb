@@ -1,7 +1,7 @@
 name 'GMAP'
 maintainer 'Eagle Genomics'
 maintainer_email 'chef@eaglegenomics.com'
-license 'apache2'
+license 'Apache v2.0'
 description 'Installs/Configures GMAP'
 long_description 'Installs/Configures GMAP'
 version '1.0.0'
