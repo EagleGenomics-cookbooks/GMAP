@@ -3,8 +3,7 @@
 Description
 ===========
 
-Cookbook for installing GMAP (Genomic Mapping and Alignment Program for mRNA and EST Sequences): a standalone program for mapping and aligning cDNA sequences to a genome. http://research-pub.gene.com/gmap/ 
-Installs a specific vesion of GMAP, mainly to support deFuse on RHEL 6.5.
+Cookbook for installing GMAP (Genomic Mapping and Alignment Program for mRNA and EST Sequences): a standalone program for mapping and aligning cDNA sequences to a genome.
 
 Requirements
 ============
@@ -28,7 +27,8 @@ See attributes/default.rb for default values.
 
     default['GMAP']['version']
 
-Currently this is a build from 2013-11-27.
+Currently this is a build from 2013-11-27: a specific vesion of GMAP, mainly to support deFuse on RHEL 6.5.
+
 
 License and Authors
 ===================
