@@ -15,7 +15,7 @@ env:
   global:
     - RUBYOPT="-W0"
   matrix:
-    - CHEF_VERSION=current INSTANCE=default-centos-66
+    - CHEF_VERSION=current INSTANCE=source-centos-66
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables
     -N DOCKER )
@@ -26,4 +26,4 @@ script:
   - KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 notifications:
   slack:
-    secure: e2GxwjiSBd3H7RsN8FVV69liACr0hgKuY9qO1Rr+6mwlIhIRyCi8R04qWQq7ZhOZj49acaBfazCSSSKPS5cmnCL8CeczdFdou/wIiZ7fcOEoocQkTo0hC7D/ZJgzhF8M4kE4oIlD9kcqKofVEzRa22cDi9CEpq2+dJ0f2I4hqvnA1xXJsnk8TyoWOluewe6RD7MFfZUNwfELrk4cWsh55f2rHx8Oj+Yn0EtBPY1tM8o737io6twwHMMAadImpXpy7u70S1Z3upylZ5A021WU+ZjkEIP13bx6hlray/gwjPpTS+bbv9mvF0Rr28Zij+9d8R6//QGKltuHPkixLCFJfMz/qrXvT3d5aQh8S4GYdL4y1MwLuDVLqriZux9fXTRH9yT8iT0IzEfJpRtRlNLW5H08JhZ/44gLrHAQh/VmBMljr33Zv9Zcx9bqUauHxEN/xt59Kb6ix/4E7Gb+NlDC1bpjbVrgRgxU47kWjT1GqS2Cv+92C+7/LsMi+Ne9+dtWY7ADIz8s2bakrCEIEcRVnG2/laVV3aVFqO/eBewjEFllFuqUf3iyhR1Pl9RKoTy7oZ02vFFY7En0RL+HS/gHDKof40EVxzrwgOdy4mbmOTTHZjEYdKJ7hx20KK/yFd1dGR6J/uyb+M8V6ywdbssKPweEhkr1vGonqEemuSG8kDU=
+    secure: mGrkec9snQ2kUNPhSKgVuINiVyVclNGmu0UjN9nOJObqxyCbED/zx2f10UiaTZlO7tp8g/+MCwatfV4vjEIuHGQgW3oCPREQkmGjeF4i9pcO+eyk5nqPDK2AYBbHW+2PYExkUmsw0Raormg333QvNcT+/hlOBvaHyv6dD04cOPtC4tBbSOjhuwqD90D7tnf+oJXeskajb+wLcHIJvrMcvK4mFsdJhasDT1fKCelzu3ctgQoJDHErgWVYT4iXNIQdG0h7npfuNfJoPsiBS0yJJ3Kbwuu7q6yCwOcxUuDPk2aG8ln9mw6AcEQcNIWQzu/qC3Lwa7JDO7TYtlxgC4qH0eh9JMVob8BmKD97PXXjPU0zLR6V1sXECqjHNlIljONztnSpmASuDZiepIsnVblU5NFVfgAK9/jOOKAe2bApCxPNmlIKd2fZKyNyPpZyRGuPjbeD/3FGYevUj4Z98JhhjPRdYZ+ZxYgki7AqcJ/mUOUSzunm+Gywhkya9ck0wnAfEzr+Cs7E5EWi4GDQtegHaHXWNhhP678f4QGVR67J1TOn9QVDuB1jff25PQGk1loYUohV941WztU6X/Uk1yhMlPQ63gdzjd4LIcAxxzHXLGKSmuJpTi4wt0xwgUmOf8vk9xE1PrJb5EFX1oAFjlMoaoqN0xQR5m/oNSQQKqYC9+o=
