@@ -1,11 +1,5 @@
 sudo: required
 dist: trusty
-addons:
-  apt:
-    sources:
-    - chef-stable-trusty
-    packages:
-    - chefdk
 install: echo "skip bundle install"
 branches:
   only:
@@ -13,17 +7,17 @@ branches:
 services: docker
 env:
   global:
-    - RUBYOPT="-W0"
+  - RUBYOPT="-W0"
   matrix:
-    - CHEF_VERSION=current INSTANCE=source-centos-66
+  - CHEF_VERSION=current INSTANCE=source-centos-66
 before_script:
-  - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables
-    -N DOCKER )
-  - eval "$(/opt/chefdk/bin/chef shell-init bash)"
-  - chef gem install kitchen-docker
-  - "/opt/chefdk/bin/chef exec rake tests"
+- sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables
+  -N DOCKER )
+- eval "$(/opt/chefdk/bin/chef shell-init bash)"
+- chef gem install kitchen-docker
+- /opt/chefdk/bin/chef exec rake tests
 script:
-  - KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
+- KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 notifications:
   slack:
     secure: mGrkec9snQ2kUNPhSKgVuINiVyVclNGmu0UjN9nOJObqxyCbED/zx2f10UiaTZlO7tp8g/+MCwatfV4vjEIuHGQgW3oCPREQkmGjeF4i9pcO+eyk5nqPDK2AYBbHW+2PYExkUmsw0Raormg333QvNcT+/hlOBvaHyv6dD04cOPtC4tBbSOjhuwqD90D7tnf+oJXeskajb+wLcHIJvrMcvK4mFsdJhasDT1fKCelzu3ctgQoJDHErgWVYT4iXNIQdG0h7npfuNfJoPsiBS0yJJ3Kbwuu7q6yCwOcxUuDPk2aG8ln9mw6AcEQcNIWQzu/qC3Lwa7JDO7TYtlxgC4qH0eh9JMVob8BmKD97PXXjPU0zLR6V1sXECqjHNlIljONztnSpmASuDZiepIsnVblU5NFVfgAK9/jOOKAe2bApCxPNmlIKd2fZKyNyPpZyRGuPjbeD/3FGYevUj4Z98JhhjPRdYZ+ZxYgki7AqcJ/mUOUSzunm+Gywhkya9ck0wnAfEzr+Cs7E5EWi4GDQtegHaHXWNhhP678f4QGVR67J1TOn9QVDuB1jff25PQGk1loYUohV941WztU6X/Uk1yhMlPQ63gdzjd4LIcAxxzHXLGKSmuJpTi4wt0xwgUmOf8vk9xE1PrJb5EFX1oAFjlMoaoqN0xQR5m/oNSQQKqYC9+o=
